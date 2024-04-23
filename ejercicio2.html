@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concatenar Cadenas</title>
+</head>
+<body>
+    <input type="text" id="cadena1" placeholder="Ingrese la primera cadena">
+    <input type="text" id="cadena2" placeholder="Ingrese la segunda cadena">
+    <button onclick="concatenarCadenas()">Concatenar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function concatenarCadenas() {
+            var cadena1 = document.getElementById("cadena1").value;
+            var cadena2 = document.getElementById("cadena2").value;
+            var resultado = cadena1 + ", " + cadena2;
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

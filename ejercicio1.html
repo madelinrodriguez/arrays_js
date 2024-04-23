@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function calcularEstadisticas(listaNumeros) {
+        // Convertir la cadena en un array de números
+        const numeros = listaNumeros.split(',').map(Number);
+    
+        // Calcular la suma
+        const suma = numeros.reduce((a, b) => a + b, 0);
+    
+        // Calcular el mayor y el menor
+        const mayor = Math.max(...numeros);
+        const menor = Math.min(...numeros);
+    
+        // Calcular la media
+        const media = suma / numeros.length;
+    
+        // Retornar los resultados
+        return {
+        suma,
+        mayor,
+        menor,
+        media,
+        };
+    }
+    
+      // Ejemplo de uso
+    const listaNumeros = '5, 10, 15, 20';
+    const estadisticas = calcularEstadisticas(listaNumeros);
+    console.log(estadisticas);
+    </script> 
+</body>
+</html>

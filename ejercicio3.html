@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar y eliminar elementos de un array</title>
+</head>
+<body>
+    <h1>Array dinámico</h1>
+    <input type="text" id="elementoNuevo" placeholder="Introduce un elemento">
+    <button onclick="agregarElemento()">Agregar</button>
+    <button onclick="eliminarElemento()">Eliminar último</button>
+    <p id="array"></p>
+
+    <script>
+        let array = [];
+
+        function agregarElemento() {
+            const elementoNuevo = document.getElementById('elementoNuevo').value;
+            array.push(elementoNuevo);
+            mostrarArray();
+        }
+
+        function eliminarElemento() {
+    if (array.length > 0) {
+        array.splice(array.length - 1, 1); // Remove last element using splice()
+        mostrarArray();
+    }
+}
+</script>
+</body>
+</html>
